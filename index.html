@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM KRAKEN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Siyah arka plan */
+            margin: 0;
+            padding: 0;
+            overflow: auto; /* Sayfanın kaymasını sağlamak için */
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        header h1 {
+            font-family: 'Creepster', cursive;
+            color: #ff0000;
+            font-size: 72px;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+            letter-spacing: 3px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        header h1:hover {
+            color: #ff6600;
+            text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        .team {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .member {
+            background-color: white;
+            padding: 20px;
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .member img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .video {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* Kan Animasyonu */
+        .blood-flow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200vh; /* Yüksekliği viewport yüksekliğine ayarlar */
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .blood-flow::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 300%;
+            background: linear-gradient(180deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.3));
+            animation: bloodAnimation 3s linear infinite;
+        }
+        @keyframes bloodAnimation {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Kan Animasyonu -->
+    <div class="blood-flow"></div>
+
+    <!-- Başlık Bölümü -->
+    <header>
+        <h1>TEAM KRAKEN</h1>
+        <p>Birlikte daha güçlü!</p>
+    </header>
+
+    <!-- Ekip Tanıtımı Bölümü -->
+    <div class="container">
+        <h2>Ekibimiz</h2>
+        <div class="team">
+            <div class="member">
+                <img src="kemal.jpg.png" alt="kemal">
+                <h3>kemal</h3>
+                <p>Ekibin strateji uzmanı.</p>
+            </div>
+            <div class="member">
+                <img src="imorr.png" alt="İMOR">
+                <h3>BURAK İMOR KARABATAK</h3>
+                <p>Yaratıcı beyin .</p>
+            </div>
+            <div class="member">
+                <img src="batu.png" alt="BATU">
+                <h3>JUST BAATU</h3>
+                <p>ressAM.</p>
+            </div>
+        </div>
+
+        <!-- Video Galeri Bölümü -->
+        <div class="video">
+            <h2>Videolarımız</h2>
+            <p>Ekibimizin videolarına göz atın!</p>
+            <video width="320" height="240" controls>
+                <source src="KEMAL.mp4" type="video/mp4">
+            </video>
+            <video width="320" height="240" controls>
+                <source src="uçak.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="link">
+            <button><a href="https://discord.gg/TEk4MJSB">DİSCORD</a></button>
+        </div>
+    </div>
+
+</body>
+</html>
